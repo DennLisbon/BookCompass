@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style/StyleQuiz.css">
+    <title>What should I read next?</title>
+</head>
+<body>
+    <form action="Result.html" method="get"> 
+
+        // I need to create a sorting system to recommend books based on the user's answers to the quiz. 
+        // This will likely involve using JavaScript to process the form data and generate a recommendation based on the user's preferences.
+
+        <label for="genre">Choose a genre:</label>          // This is the dropdown menu for selecting a genre.
+        <select id="genre" name="genre">                    // Each option represents a different genre of books that the user can choose from.
+            <option value="---">---</option>                // The first option is a placeholder, indicating that no genre has been selected yet.
+            <option value="romance">Romance</option>        
+            <option value="Horror">Horror</option>          // The value attribute of each option is what will be sent to the server when the form is submitted, while the text between the option tags is what will be displayed to the user in the dropdown menu.
+            <option value="mystery">Mystery</option>        // Need to create a display for the results page that will show the user the book recommendation based on their answers to the quiz.
+            <option value="fantasy">Fantasy</option>
+            <option value="science-fiction">Science Fiction</option>
+        </select>
+        <br><br>
+
+        <label for="length">Choose a length:</label>        // This is the dropdown menu for selecting a book length. It needs a better name, maybe "book-length" or something like that.
+        <select id="length" name="length">                  // Each option represents a different length of book that the user can choose from. The value attribute of each option is what will be sent to the server when the form is submitted, while the text between the option tags is what will be displayed to the user in the dropdown menu.
+            <option value="---">---</option>                // The first option is a placeholder, indicating that no length has been selected yet.
+            <option value="short">Short</option>
+            <option value="medium">Medium</option>          //
+            <option value="long">Long</option>
+        </select>
+        <br><br>
+
+        <label for="mood">Choose a mood:</label>            // This is the dropdown menu for selecting a mood. It also needs a better name, I'm considering something like "aestehtic" or "vibe" or something like that.
+        <select id="mood" name="mood">                      // Each option represents a different mood that the user can choose from. The value attribute of each option is what will be sent to the server when the form is submitted, while the text between the option tags is what will be displayed to the user in the dropdown menu.
+            <option value="---">---</option>                // The first option is a placeholder, indicating that no mood has been selected yet.
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>                //
+            <option value="adventurous">Adventurous</option>
+            <option value="romantic">Romantic</option>
+            <option value="thought-provoking">Thought-Provoking</option>
+        </select>
+        <br><br>
+
+        <label for="author">Choose a gender for the author:</label> // This section doesn't sound like such a great question, maybe way too broad and not really relevant to the user's preferences. I might need to rethink this question or maybe just remove it altogether.
+        <select id="author" name="author">                          // This is just wrong for the name of the dropdown menu, I need to change it to something like "author-gender" or something like that.
+            <option value="---">---</option>
+            <option value="man">Man</option>
+            <option value="woman">Woman</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
