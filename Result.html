@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Here it is!</title>
+    <link rel="shortcut icon" href="src/img/icon.png" type="image/png">
+
+    <link rel="stylesheet" href="src/style/Result_style.css">
+    <link rel="script" href="src/style/Result_script.js">
+
 </head>
 <body>
+    <h1>Your Recommendation:</h1>
+    <p id="result">
+        <!-- The result will be displayed here -->      
+        <!-- I want to add a special message display the each book's name and author, as well as a brief description -->
+        <!-- For example: "We recommend 'The Great Gatsby' by F. Scott Fitzgerald!" -->
+        <!-- <book-name> by <author> -->
+            
+        <!-- For that, I need to make a connection to the database to retrieve the book information and display it in this section -->
+    </p>
+
+    <div>
+        <img id="bookCover" src="" alt="Book Cover">
+        <!-- The book cover image will be displayed here -->
+        <!-- I want to connect this section to a database of book information and display the cover image -->
+    </div>
+
+    <button id="backButton" onclick="goBack()">Go Back</button>
     
 </body>
 </html>
