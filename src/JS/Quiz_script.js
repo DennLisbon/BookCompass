@@ -1,0 +1,1 @@
+//eu tenho que criar um código que vai pegar as respostas do quiz e calcular a pontuação total do usuário com base nas respostas selecionadas. Depois disso, o código deve usar a pontuação total para determinar qual livro recomendar para o usuário. Eu também preciso criar uma função que vai exibir a recomendação do livro para o usuário de forma clara e atraente.

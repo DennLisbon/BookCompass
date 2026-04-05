@@ -7,14 +7,56 @@
     <link rel="stylesheet" href="style/Styleindex.css">
     <link rel="shortcut icon" href="src/img/icon.png" type="image/png">
 </head>
-<body>
-    <header class="Centralheader">
-       <h1>BookCompass</h1>
-        <div class="logo">Logo</div>
-        <nav class="nav-links">Links</nav>
-        <div class="search">Search</div>
+<body> <!-- eu não gosto de nada disso aqui agora, porém o desing talvez fique interessante depois de uma revisão -->
+    
+    <header style="text-align:center; padding: 32px 16px;">
+        <nav>
+            <ul style="margin: 0; padding: 0; list-style: none; display: inline-flex; gap: 24px;">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <div style="max-width: 720px; margin: 32px auto 0; text-align: center;">
+            <h1>Welcome to BookCompass!</h1>
+            <p>Discover your next great read with us. Whether you're looking for the latest bestsellers, timeless classics, or hidden gems, BookCompass is here to guide you on your literary journey. Explore our extensive collection, read reviews, and find personalized recommendations tailored to your tastes. Happy reading!</p>
+        </div>
     </header>
-<p>Welcome to BookCompass!</p>
-<p>Discover your next great read with us. Whether you're looking for the latest bestsellers, timeless classics, or hidden gems, BookCompass is here to guide you on your literary journey. Explore our extensive collection, read reviews, and find personalized recommendations tailored to your tastes. Happy reading!</p>
+    <div style="max-width: 720px; margin: 32px auto; padding: 0 16px;">
+        <h2>Featured Books</h2>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <div style="flex: 1 1 calc(33.333% - 32px); box-sizing: border-box; border: 1px solid #ccc; padding: 16px;">
+                <h3>Book Title 1</h3>
+                <p>Author: Author Name</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div style="flex: 1 1 calc(33.333% - 32px); box-sizing: border-box; border: 1px solid #ccc; padding: 16px;">
+                <h3>Book Title 2</h3>
+                <p>Author: Author Name</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div style="flex: 1 1 calc(33.333% - 32px); box-sizing: border-box; border: 1px solid #ccc; padding: 16px;">
+                <h3>Book Title 3</h3>
+                <p>Author: Author Name</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div><!--isso aqui me incomoda um pouco, não parece fazer sentido com a premissa do site-->
+    </div>
+    <label for="newsletter" style="display: block; text-align: center; margin: 16px 0 8px;">Subscribe to our newsletter:</label>
+    <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 32px;">
+        <input type="email" id="newsletter" name="newsletter" placeholder="Enter your email..." style="padding: 8px; width: 300px; border: 1px solid #ccc; border-radius: 4px;">
+        <button style="padding: 8px 16px; border: none; background-color: #28A745; color: white; border-radius: 4px; cursor: pointer;">Subscribe</button>
+    </div>
+    <label for="search" style="display: block; text-align: center; margin: 32px 0 16px;">Search for your next book:</label>
+    <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 32px;">
+        <input type="text" id="search" name="search" placeholder="Search for books..." style="padding: 8px; width: 300px; border: 1px solid #ccc; border-radius: 4px;">
+        <button style="padding: 8px 16px; border: none; background-color: #007BFF; color: white; border-radius: 4px; cursor: pointer;">Search</button>
+    </div> <!--não faz sentido pra premissa do site, mas vou manter porque achei a estrutura interessante-->
+    <footer style="text-align: center; padding: 16px; background-color: #f1f1f1;">
+        <p>&copy; 2024 BookCompass. All rights reserved.</p>
+    </footer>
+    <!-- eu não gosto de nada disso aqui agora, porém o desing talvez fique interessante depois de uma revisão -->
+
 </body>
 </html>

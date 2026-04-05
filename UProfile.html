@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile - BookCompass</title>
-    <link rel="stylesheet" href="src/style/Styleup.css">
+    <link rel="stylesheet" href="src/style/UProfile_style.css">
     <link rel="shortcut icon" href="src/img/icon.png" type="image/png">
 </head>
 <body>
     <div class="main-box">
-        <p>Este é um exemplo de conteúdo dentro da caixa principal.</p>
+        <p>Este é um exemplo de conteúdo dentro da caixa principal.</p><br>
+
+        <div class="profile-upload">
+            <label for="profile-pic">Profile Picture:</label><br>
+            <input type="file" id="profile-pic" name="profile-pic"><br>
+        </div><br>
+
         <div class="lower-main-box">
             <p>Este é um exemplo de conteúdo dentro da caixa inferior.</p>
-                <label for="profile-pic">Profile Picture:</label><br>
-                <input type="file" id="profile-pic" name="profile-pic"><br>
-                
-                <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username"><br>
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                
-                <label for="bio">Bio:</label><br>
-                <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br>
-                
-                <input type="submit" value="Submit">
+
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="bio">Bio:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br>
+
+            <input type="submit" value="Submit">
         </div>
     </div>
 </body>

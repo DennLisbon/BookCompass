@@ -1,5 +1,6 @@
 header.Centralheader {
     display: flex;
-     justify-content: space-between;
-      align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
+/* eu quero deixar isso aqui mais bonito, mas primeiro eu vou ver oq faz sentido pra página principal. */
