@@ -3,5 +3,21 @@ header.Centralheader {
     justify-content: space-between;
     align-items: center;
 }
+
+div{
+    border-color: blueviolet;
+    border-radius: 5%;
+    border-width: 3px;
+    background-color: #F1E9E9;
+
+    font-family: Helvetica, sans-serif;
+}
+
+img{
+    width: 200px;
+    height: 350px;
+    border-radius: 5%;
+
+}
 /* eu quero deixar isso aqui mais bonito, mas primeiro eu vou ver oq faz sentido pra página principal. */
 /* o problema é que o desing tá em outro continente!!!*/
