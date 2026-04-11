@@ -15,46 +15,50 @@
     <form action="Result.html" method="get"> 
 
         
-        <label for="genre">Choose a genre:</label>   <!-- eu vou deixar tipo um quiz do Buzzfeed, não um formulário do governo-->       
-        <select id="genre" name="genre" class="genre">                   
-            <option value="---">---</option>                
-            <option value="romance" value="1">Romance</option>        
-            <option value="Horror" value="2">Horror</option>          
-            <option value="mystery" value="3">Mystery</option>        <!-- Need to create a display for the results page that will show the user the book recommendation based on their answers to the quiz. -->
-            <option value="fantasy" value="4">Fantasy</option>
-            <option value="science-fiction" value="5">Science Fiction</option>
-        </select>
-        <br><br>
+        <fieldset>
+            <legend>Book Recommendations Quiz</legend><br>
+            
+            <div class="question">
+            <label for="genre">What genre interests you?</label>   
+            <select id="genre" name="genre" class="genre" required>                   
+                <option value="">Select an option</option>                
+                <option value="romance">Romance</option>        
+                <option value="horror">Horror</option>          
+                <option value="mystery">Mystery</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="science-fiction">Science Fiction</option>
+            </select>
+            </div><br>
 
-        <label for="length">Choose a book length:</label>        
-        <select id="length" name="length" class="length">                  
-            <option value="---">---</option>                
-            <option value="short" value="1">Short</option>
-            <option value="medium" value="2">Medium</option>          
-            <option value="long" value="3">Long</option>
-        </select>
-        <br><br>
+            <div class="question">
+            <label for="length">Preferred book length?</label>        
+            <select id="length" name="length" class="length" required>                  
+                <option value="">Select an option</option>                
+                <option value="short">Short (<= 200 pages)</option>
+                <option value="medium">Medium (200-400 pages)</option>          
+                <option value="long">Long (>= 400 pages)</option>
+            </select>
+            </div><br>
 
-        <label for="mood">Choose a mood:</label>            
-        <select id="mood" name="mood" class="mood">                      
-            <option value="---">---</option>                
-            <option value="happy" value="1">Happy</option>
-            <option value="sad" value="2">Sad</option>               
-            <option value="adventurous" value="3">Adventurous</option>
-            <option value="romantic" value="4">Romantic</option>
-            <option value="thought-provoking" value="5">Thought-Provoking</option>
-        </select>
-        <br><br>
+            <div class="question">
+            <label for="mood">What's your current mood?</label>         <!--tenho q arrumar novas classificações-->   
+            <select id="mood" name="mood" class="mood" required>        <!--como q eu vou arrumar um livro de terror romântico???-->              
+                <option value="">Select an option</option>                
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>               
+                <option value="adventurous">Adventurous</option>
+                <option value="romantic">Romantic</option>
+                <option value="thought-provoking">Thought-Provoking</option>
+            </select>
+            </div><br>
+        </fieldset>
 
-        <label for="author">Choose a gender for the author:</label> <!--This section doesn't sound like such a great question, maybe way too broad and not really relevant to the user's preferences. I might need to rethink this question or maybe just remove it altogether.-->
-        <select id="author" name="author">                          <!--This is just wrong for the name of the dropdown menu, I need to change it to something like "author-gender" or something like that.-->
-            <option value="---">---</option>
-            <option value="man" value="1">Man</option>
-            <option value="woman" value="2">Woman</option>
-        </select>
-        <br><br>
-
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit"><br>
+        <button onclick="">
+          click here to see your results
+        </button>
+            <!--eu tenho que decidir qual dos dois modos é mais eficiente-->
+            <!--eu aprendi por button, mas esse input parece interessante-->
     </form>
 </body>
 </html>
