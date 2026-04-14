@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>What should I read next?</title>
-    <link rel="shortcut icon" href="src/img/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="src/img/favicon.webp" type="image/webp">
 
     <link rel="stylesheet" href="src/style/Quiz_style.css">
     <script src="src/JS/Quiz_script.js" defer></script>
@@ -40,17 +40,16 @@
             </select>
             </div><br>
 
-            <div class="question">
-            <label for="mood">What's your current mood?</label>         <!--tenho q arrumar novas classificações-->   
-            <select id="mood" name="mood" class="mood" required>        <!--como q eu vou arrumar um livro de terror romântico???-->              
-                <option value="">Select an option</option>                
-                <option value="happy">Happy</option>
-                <option value="sad">Sad</option>               
-                <option value="adventurous">Adventurous</option>
-                <option value="romantic">Romantic</option>
-                <option value="thought-provoking">Thought-Provoking</option>
-            </select>
-            </div><br>
+            
+        <div class="question">
+        <label for="pace">How fast-paced do you prefer your stories?</label>
+        <select id="pace" name="pace" class="pace" required>
+            <option value="">Select an option</option>
+            <option value="slow">Slow and contemplative</option>
+            <option value="moderate">Moderate pace</option>
+            <option value="fast">Fast and thrilling</option>
+        </select>
+        </div><br>
         </fieldset>
 
         <input id="Potton" type="submit" value="Submit"><br>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Here it is!</title>
-    <link rel="shortcut icon" href="src/img/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="src/img/favicon.webp" type="image/webp">
 
     <link rel="stylesheet" href="src/style/Result_style.css">
     <script src="src/JS/Result_script.js" defer></script>
@@ -21,17 +21,19 @@
     </p>
     
     <!-- todos esses div tão errados-->
-    <div style="text-align: center;">       
+    <div class="Book_Display" id="main_result">       
         <div>
-            <img class="bookcover" id="bookCover" src="" alt="Book Cover">
+            <img class="bookcover" id="bookCover" src="src/img/Radcovers/BookThief.webp" alt="Book Cover" type="image/webp">
             <!-- The book cover image will be displayed here -->
             <!-- I want to connect this section to a database of book information and display the cover image -->
+
+            <!--Im going to leave this placeholder here while I edit the style and structure of the page-->
             <figcaption id="bookCaption">Book Cover</figcaption>
         </div>
     </div>
 
     <button id="backButton" onclick="goBack()">Go Back</button> <!-- isso aqui nem faz sentido, esse bot dos infernos enchendo o código de lixo-->
-    <!-- <a href="Quiz.html">Take Quiz Again</a> -->
+    <button class="Back_Button" id="result_quiz"> <a href="Quiz.html">Take Quiz Again</a></button>
     <!-- essa parte pode ser melhorada-->
 </body>
 </html>

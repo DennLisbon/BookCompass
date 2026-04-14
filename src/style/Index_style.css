@@ -9,6 +9,9 @@ div{
     border-radius: 5%;
     border-width: 3px;
     background-color: #F1E9E9;
+    display: grid;
+     grid-template-columns: 1fr 1fr; 
+     gap: 20px;
 
     font-family: Helvetica, sans-serif;
 }
@@ -18,6 +21,15 @@ img{
     height: 350px;
     border-radius: 5%;
 
+}
+
+section{
+    border-color: blueviolet;
+    border-radius: 5%;
+    border-width: 3px;
+    background-color: #F1E9E9;
+
+    font-family: Helvetica, sans-serif;
 }
 /* eu quero deixar isso aqui mais bonito, mas primeiro eu vou ver oq faz sentido pra página principal. */
 /* o problema é que o desing tá em outro continente!!!*/
