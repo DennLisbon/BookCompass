@@ -6,6 +6,23 @@
     border: 5px solid black; 
     padding: 10px;
 }
+
+a.Back_Button:visited {
+    color: blueviolet;
+}
+
+a.Back_Button:hover {
+    color: lightgreen;
+}
+
+a.Back_Button:focus {
+    color: rgb(246, 111, 134);
+}
+
+a.Back_Button:active {
+    color: olivedrab;
+}
+
 /*vou criar uma moldura pra segurar a foto da capa do livro, masquero que ela fique vazia por enquanto acontece o desenvolvimento.*/
 /*não sei se o css tem capacidade pra isso e tô torcendo pro react ser o suficiente pra deixar essa página agradável.*/
 

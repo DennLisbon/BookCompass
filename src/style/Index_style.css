@@ -31,5 +31,21 @@ section{
 
     font-family: Helvetica, sans-serif;
 }
+
+a.main_quiz:visited {
+    color: blueviolet;
+}
+
+a.main_quiz:hover {
+    color: lightgreen;
+}
+
+a.main_quiz:focus {
+    color: rgb(246, 111, 134);
+}
+
+a.main_quiz:active {
+    color: olivedrab;
+}
 /* eu quero deixar isso aqui mais bonito, mas primeiro eu vou ver oq faz sentido pra página principal. */
 /* o problema é que o desing tá em outro continente!!!*/
