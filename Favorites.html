@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorites - BookCompass</title>
+    <link rel="stylesheet" href="src/style/Favorites_style.css">
+    <link rel="shortcut icon" href="src/img/favicon.webp" type="image/webp">
+    <script src="src/JS/Favorites_script.js" defer></script>
+</head>
+<body>
+
+    <header class="main-navbar">
+        <div class="logo">
+            <a href="Index.html">🧭 BookCompass</a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="UProfile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="user-avatar-static">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=80&h=80&q=80" alt="User Avatar">
+        </div>
+    </header>
+
+    <main class="favorites-container">
+        
+        <header class="favorites-header">
+            <h1>My Virtual Bookshelf 📚</h1>
+            <p>Track your favorite reads, ratings, and current progress.</p>
+        </header>
+
+        <section class="shelf-grid">
+            
+            <article class="shelf-item">
+                <div class="book-badge reading">Reading</div>
+                <img src="src/img/Radcovers/Howl.webp" alt="Howl's Moving Castle Cover" class="shelf-cover">
+                <div class="shelf-info">
+                    <h3>Howl's Moving Castle</h3>
+                    <p class="author">Diana Wynne Jones</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ <span>(5.0)</span></div>
+                    <p class="user-notes">"Loving the magical atmosphere so far. Calcifer is the best character!"</p>
+                </div>
+                <div class="shelf-actions">
+                    <button class="btn-remove" title="Remove from favorites">❤️ Remove</button>
+                </div>
+            </article>
+
+            <article class="shelf-item">
+                <div class="book-badge completed">Completed</div>
+                <img src="src/img/Radcovers/BookThief.webp" alt="The Book Thief Cover" class="shelf-cover">
+                <div class="shelf-info">
+                    <h3>The Book Thief</h3>
+                    <p class="author">Markus Zusak</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ <span>(5.0)</span></div>
+                    <p class="user-notes">"Cried like a baby. The perspective of Death making the narration is pure art."</p>
+                </div>
+                <div class="shelf-actions">
+                    <button class="btn-remove" title="Remove from favorites">❤️ Remove</button>
+                </div>
+            </article>
+
+            <article class="shelf-item">
+                <div class="book-badge to-read">Want to Read</div>
+                <img src="src/img/Radcovers/Catcher.webp" alt="The Catcher in the Rye Cover" class="shelf-cover">
+                <div class="shelf-info">
+                    <h3>The Catcher in the Rye</h3>
+                    <p class="author">J.D. Salinger</p>
+                    <div class="rating">⭐⭐⭐⭐☆ <span>(4.0)</span></div>
+                    <p class="user-notes">"Recommended by the BookCompass quiz. Starting next week!"</p>
+                </div>
+                <div class="shelf-actions">
+                    <button class="btn-remove" title="Remove from favorites">❤️ Remove</button>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer style="text-align: center; padding: 20px; background-color: #f1f5f9; margin-top: 60px; border-top: 1px solid #e2e8f0;">
+        <p>&copy; 2026 BookCompass. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

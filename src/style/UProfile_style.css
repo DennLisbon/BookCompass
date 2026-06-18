@@ -1,0 +1,247 @@
+/* Configurações de Fundo e Base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    margin: 0;
+    padding: 20px;
+}
+
+.profile-header {
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+.back-home-link {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.back-home-link:hover {
+    color: #3b82f6;
+}
+
+/* Container Principal em Grid (2 Colunas no Desktop) */
+.profile-container {
+    max-width: 1000px;
+    margin: 10px auto 40px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+/* O Form dita o layout interno */
+#profileForm {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+}
+
+/* --- COLUNA ESQUERDA (Sidebar) --- */
+.profile-sidebar {
+    background-color: #f1f5f9;
+    padding: 40px 30px;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-upload {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.avatar-preview {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.avatar-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Esconde o input original feio e estiliza a label como botão */
+.avatar-upload input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.file-label:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+/* --- COLUNA DIREITA (Formulário Principal) --- */
+.profile-main-form {
+    padding: 40px;
+}
+
+.profile-main-form h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #1e293b;
+}
+
+.subtitle {
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* Sub-grid para os inputs (2 por linha) */
+.form-grid {
+    border: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Estrutura de cada grupo de Input */
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.field-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.field-group input, 
+.field-group textarea {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #334155;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field-group input:focus, 
+.field-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Preferências (Checkboxes) */
+.preferences-section {
+    border: none;
+    padding: 20px 0 0 0;
+    margin: 0 0 30px 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.preferences-section h3 {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+/* Botões finais */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 25px;
+}
+
+.btn-save, .btn-cancel {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-save {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+}
+
+.btn-save:hover {
+    background-color: #2563eb;
+}
+
+.btn-cancel {
+    background-color: #fff;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+}
+
+.btn-cancel:hover {
+    background-color: #f8fafc;
+    color: #334155;
+}
+
+/* --- RESPONSIVIDADE (Mobile First inverso) --- */
+@media (max-width: 768px) {
+    #profileForm {
+        grid-template-columns: 1fr; /* Vira uma coluna só no celular */
+    }
+
+    .profile-sidebar {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 30px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr; /* Inputs empilham no celular */
+    }
+
+    .profile-main-form {
+        padding: 30px 20px;
+    }
+
+    .checkbox-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

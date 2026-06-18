@@ -3,62 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>What should I read next?</title>
+    <title>BookCompass Quiz - Find Your Next Read</title>
     <link rel="shortcut icon" href="src/img/favicon.webp" type="image/webp">
-
     <link rel="stylesheet" href="src/style/Quiz_style.css">
-    
 </head>
 <body>
-    <form action="Result.html" method="get"> 
 
-        
-        <fieldset>
-            <legend>Book Recommendations Quiz</legend>
+    <main class="quiz-container">
+        <form action="Result.html" method="get" id="bookQuiz"> 
             
-            <div class="question">
-            <label for="genre">What genre interests you?</label><br>   
-            <select id="genre" name="genre" class="genre" required>                   
-                <option value="">Select an option</option>                
-                <option value="romance">Romance</option>        
-                <option value="horror">Horror</option>          
-                <option value="mystery">Mystery</option>
-                <option value="fantasy">Fantasy</option>
-                <option value="science-fiction">Science Fiction</option>
-            </select>
+            <header class="quiz-header">
+                <h1>Book Recommendation Quiz</h1>
+                <p>Answer these 4 quick questions to find your perfect literary match.</p>
+            </header>
+
+            <fieldset class="question-group">
+                <legend>1. What kind of world do you want to dive into?</legend>
+                <div class="options-grid">
+                    <label class="option-card">
+                        <input type="radio" name="genre" value="romance" required>
+                        <span>❤️ Romance</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="genre" value="horror">
+                        <span>👻 Horror</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="genre" value="mystery">
+                        <span>🕵️‍♂️ Mystery</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="genre" value="fantasy">
+                        <span>✨ Fantasy</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="genre" value="science-fiction">
+                        <span>🚀 Sci-Fi</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset class="question-group">
+                <legend>2. What's your preferred reading pace?</legend>
+                <div class="options-grid column-layout">
+                    <label class="option-card row-card">
+                        <input type="radio" name="pace" value="slow" required>
+                        <div class="card-text">
+                            <strong>☕ Slow & Contemplative</strong>
+                            <p>Beautiful prose, deep world-building, and character growth.</p>
+                        </div>
+                    </label>
+                    <label class="option-card row-card">
+                        <input type="radio" name="pace" value="moderate">
+                        <div class="card-text">
+                            <strong>⚖️ Moderate & Balanced</strong>
+                            <p>A steady plot with time to breathe and explore details.</p>
+                        </div>
+                    </label>
+                    <label class="option-card row-card">
+                        <input type="radio" name="pace" value="fast">
+                        <div class="card-text">
+                            <strong>⚡ Fast & Thrilling</strong>
+                            <p>Action-packed, lots of cliffhangers, hard to put down.</p>
+                        </div>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset class="question-group">
+                <legend>3. How much time do you want to spend on this book?</legend>
+                <div class="options-grid">
+                    <label class="option-card">
+                        <input type="radio" name="length" value="short" required>
+                        <span>⏱️ Quick Read (&lt; 250 pages)</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="length" value="medium">
+                        <span>📖 Regular Novel (250-450 pages)</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="length" value="long">
+                        <span>📚 Epic Journey (&gt; 450 pages)</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset class="question-group">
+                <legend>4. What kind of mood are you in?</legend>
+                <div class="options-grid">
+                    <label class="option-card">
+                        <input type="radio" name="tone" value="lighthearted" required>
+                        <span>☀️ Light & Fun</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="tone" value="emotional">
+                        <span>😢 Emotional & Deep</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="tone" value="dark">
+                        <span>🖤 Dark & Gritty</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="submit-container">
+                <button type="submit" class="btn-submit">
+                    Discover Your Next Great Read ✨
+                </button>
             </div>
 
-            <div class="question">
-            <label for="length">Preferred book length?</label> <br>       
-            <select id="length" name="length" class="length" required>                  
-                <option value="">Select an option</option>                
-                <option value="short">Short (<= 200 pages)</option>
-                <option value="medium">Medium (200-400 pages)</option>          
-                <option value="long">Long (>= 400 pages)</option>
-            </select>
-            </div>
+        </form>
+    </main>
 
-            
-            <div class="question">
-            <label for="pace">How fast-paced do you prefer your stories?</label><br>
-            <select id="pace" name="pace" class="pace" required>
-                <option value="">Select an option</option>
-                <option value="slow">Slow and contemplative</option>
-                <option value="moderate">Moderate pace</option>
-                <option value="fast">Fast and thrilling</option>
-            </select>
-        </div>
-        </fieldset><br>
-
-        <input id="Potton" type="submit" value="Submit"><br>
-        <button onclick="">
-          click here to see your results
-        </button>
-            <!--eu tenho que decidir qual dos dois modos é mais eficiente-->
-            <!--eu aprendi por button, mas esse input parece interessante-->
-            <!-- fora q eu tenho que obviamente passar as resposta pro js, sql e depois mandar o user pra Resultados-->
-    </form>
     <script src="src/JS/Quiz_script.js"></script>
 </body>
 </html>

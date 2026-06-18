@@ -1,9 +1,150 @@
-.question{
-    margin: 5px;
-    border: 5px;
-    border-radius: 5%;
-    border-color: rgb(144, 84, 200);
-    color:rgb(144, 84, 200) ;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+/* Configurações Globais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #2c3e50;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.quiz-container {
+    max-width: 650px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.quiz-header h1 {
+    font-size: 2rem;
+    color: #1a252f;
+    margin-bottom: 8px;
+}
+
+.quiz-header p {
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* Customização dos Fieldsets (Perguntas) */
+.question-group {
+    border: none;
+    padding: 0;
+    margin: 0 0 35px 0;
+}
+
+.question-group legend {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Grid de Opções (Visual de App/Quiz Moderno) */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+/* Layout em linha para perguntas com mais texto */
+.column-layout {
+    grid-template-columns: 1fr;
+}
+
+/* Esconde o círculo padrão do radio button, mas mantém acessível */
+.option-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilo do Card da Opção */
+.option-card {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.option-card:hover {
+    border-color: #3498db;
+    background-color: #f7faff;
+}
+
+/* Quando o usuário seleciona o card */
+.option-card input[type="radio"]:checked + span,
+.option-card input[type="radio"]:checked + .card-text strong {
+    color: #2980b9;
+}
+
+.option-card input[type="radio"]:checked ~ * {
+    color: #2980b9;
+}
+
+.option-card:has(input[type="radio"]:checked) {
+    border-color: #3498db;
+    background-color: #ebf5fb;
+}
+
+/* Textos internos dos cards complexos */
+.card-text strong {
+    display: block;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+.card-text p {
+    margin: 4px 0 0 0;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+/* Botão de Envio */
+.submit-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-submit {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Responsividade para telas maiores (computador) */
+@media (min-width: 480px) {
+    .options-grid:not(.column-layout) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

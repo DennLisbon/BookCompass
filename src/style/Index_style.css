@@ -1,39 +1,286 @@
-header {
-    padding: 20px;
+/* Configurações Globais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+    color: #334155;
+}
+
+/* --- BARRA DE NAVEGAÇÃO SUPERIOR --- */
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-section{
-    border-color: blueviolet;
-    border-radius: 5%;
-    border-width: 3px;
-    background-color: #F1E9E9;
-
-    font-family: Helvetica, sans-serif;
+    padding: 12px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-footer{
-min-height: 100px;
-background-color: #f5f5f5;
-padding: 20px;
-text-align: center;
-color: #666;
+.logo a {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1e293b;
+    text-decoration: none;
 }
 
-a.main_quiz:visited {
-    color: blueviolet;
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
-a.main_quiz:hover {
-    color: lightgreen;
+.nav-links a {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
-a.main_quiz:focus {
-    color: rgb(246, 111, 134);
+.nav-links a:hover {
+    color: #3b82f6;
 }
 
-a.main_quiz:active {
-    color: olivedrab;
+/* --- BOLINHA DE PERFIL E DROPDOWN --- */
+.user-profile-menu {
+    position: relative;
+    cursor: pointer;
 }
-/* eu quero deixar isso aqui mais bonito, mas primeiro eu vou ver oq faz sentido pra página principal. */
-/* o problema é que o desing tá em outro continente!!!*/
+
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #e2e8f0;
+    transition: border-color 0.2s;
+}
+
+.user-profile-menu:hover .avatar-circle {
+    border-color: #3b82f6;
+}
+
+.avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Caixa do Menu Dropdown (Invisível por padrão) */
+.profile-dropdown {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: #ffffff;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+    padding: 10px 0;
+    display: none; /* Escondido */
+    flex-direction: column;
+}
+
+/* Classe engatilhada pelo JavaScript para exibir o menu */
+.profile-dropdown.active {
+    display: flex;
+}
+
+.dropdown-header {
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-header strong {
+    color: #1e293b;
+    font-size: 0.95rem;
+}
+
+.dropdown-header span {
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+
+.profile-dropdown hr {
+    border: 0;
+    border-top: 1px solid #f1f5f9;
+    margin: 8px 0;
+}
+
+.profile-dropdown a {
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #475569;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.profile-dropdown a:hover {
+    background-color: #f8fafc;
+    color: #3b82f6;
+}
+
+.profile-dropdown .logout-link {
+    color: #ef4444;
+}
+
+.profile-dropdown .logout-link:hover {
+    background-color: #fef2f2;
+    color: #ef4444;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #64748b;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* O Grid 2x2 dos Livros */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.book-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+}
+
+.book-card img {
+    max-width: 140px;
+    height: auto;
+    border-radius: 6px;
+    margin: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.book-card h3 {
+    margin: 0;
+    color: #1e293b;
+}
+
+.book-card .author {
+    font-weight: 600;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Botão do Quiz */
+.quiz-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.main_quiz_btn {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: #3b82f6;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+    transition: all 0.2s;
+}
+
+.main_quiz_btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* Inputs de busca e newsletter lado a lado */
+.search-newsletter-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 40px;
+}
+
+.form-section label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.input-group button {
+    padding: 12px 20px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.input-group button:hover {
+    background-color: #059669;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .main-navbar {
+        padding: 12px 20px;
+    }
+
+    .nav-links {
+        display: none; /* Esconde menu tradicional no mobile para não quebrar */
+    }
+
+    .book-grid, .search-newsletter-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
